@@ -220,7 +220,7 @@ function App() {
     <div className="App">
       <Info open={infoOpen} handleClose={handleClose} config={config} />
       <div className="counter">
-        Total Stickers you made: {config?.total || "Not available"}
+        已发电量: {config?.total || "没计量"}
       </div>
       <div className="container">
         <div className="vertical">
@@ -256,7 +256,7 @@ function App() {
           />
           <div className="settings">
             <div>
-              <label>Rotate: </label>
+              <label>旋转: </label>
               <Slider
                 value={rotate}
                 onChange={(e, v) => setRotate(v)}
@@ -269,7 +269,7 @@ function App() {
             </div>
             <div>
               <label>
-                <nobr>Font size: </nobr>
+                <nobr>大小: </nobr>
               </label>
               <Slider
                 value={fontSize}
@@ -283,7 +283,7 @@ function App() {
             </div>
             <div>
               <label>
-                <nobr>Spacing: </nobr>
+                <nobr>间隔: </nobr>
               </label>
               <Slider
                 value={spaceSize}
@@ -296,7 +296,7 @@ function App() {
               />
             </div>
             <div>
-              <label>Curve (Beta): </label>
+              <label>弧线 (Beta): </label>
               <Switch
                 checked={curve}
                 onChange={(e) => setCurve(e.target.checked)}
